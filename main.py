@@ -3,9 +3,10 @@ sys.path.append('./recommendation')
 sys.path.append('./device_finder')
 
 from device_finder.find_objects import parse_image,compare
+from device_finder.image_ui import preprocess
 from recommendation.appliance_selector import get_recommendations
 from recommendation.object_recommender import choose_object
-import yolov_model as ym
+import recommendation.yolov_model as ym
 
 import cv2
 import numpy as np
@@ -26,3 +27,8 @@ def get_recommendation_objects(input_image,path):
 
 def get_similar_objects(item,path):
     return choose_object(item.lower(),path)
+
+def preprocess_image(image_path):
+    path = generate_random_filename('jpg')
+    return preprocess(image_path,path),path
+    

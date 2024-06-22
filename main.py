@@ -3,7 +3,8 @@ sys.path.append('./recommendation')
 sys.path.append('./device_finder')
 
 from device_finder.find_objects import parse_image,compare
-from appliance_selector import get_recommendations
+from recommendation.appliance_selector import get_recommendations
+from recommendation.object_recommender import choose_object
 import yolov_model as ym
 
 import cv2
@@ -23,4 +24,5 @@ def get_recommendation_objects(input_image,path):
     reco = get_recommendations(score)
     return reco
 
-# print(get_recommendation_objects("/home/rohan/hackonama/recommendation/TimberlandkingLSWENGE_0d80ca15-a0ad-4341-8b5e-4efa70f4c7a5.webp"))
+def get_similar_objects(item,path):
+    return choose_object(item.lower(),path)

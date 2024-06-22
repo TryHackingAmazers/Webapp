@@ -21,7 +21,7 @@
                             width="50" height="50">
                         <p>Click or drag file to this area to upload.</p>
                         {% else %}
-                        <img src="{{ image }}" alt="Uploaded image"
+                        <img src="{{ url_for('static', filename=image) }}" alt="Uploaded image"
                             style="width: 100%; height: 100%; object-fit: contain;">
                         {% endif %}
                     </div>
@@ -34,10 +34,10 @@
         <div class="d-flex flex-column">
             <h1 class="h3 mb-3 font-weight-normal">Suggestions</h1>
             <div class="d-flex flex-column flex-wrap">
-                {% for item in items[:7] %}
+                {% for item in items[:2] %}
                 <div class="card m-2" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ item }}</h5>
+                        <img src="{{ url_for('serve_datasets', filename=item) }}" class="card-img-top" alt="...">
                     </div>
                 </div>
                 {% endfor %}

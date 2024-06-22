@@ -9,7 +9,7 @@ Welcome to the Interior Design Product Suggestions project! This tool aims to as
 - **Photo Upload:** Users can upload photos of their interior spaces.
   ![User Input](./User_Input.jpg "Upload Your Room's Photo")
 - **Product Recommendations:** Based on the photo analysis, the tool suggests a range of products that complement the existing interior design.
-- **Product Images:** Detailed images of the suggested products are provided for better visualization.
+- **Product Images:** Detailed images of the suggested products are provided for better visualization.![Recommendations](./ui.png)
 - **Select a Suggested Product:** After viewing the recommendations, the user can chosse a product they're interested in.
   ![The Bed Option](./Bed.png "Choose Your Favorite Furniture")
 - **Place Virtually in Your Room:** The user can click on the "Place in Room" button to see the furniture placed in their uploaded photo of the interior .

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Upload</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+    <div class="d-flex w-100">
+        <div class="d-flex flex-column justify-content-center w-100 text-center align-items-stretch flex-grow-1 p-5">
+            <h1 class="h3 mb-3 font-weight-normal">Please upload an image</h1>
+            <form action="/home" method="post" enctype="multipart/form-data">
+                <label class="upload-label d-flex align-items-center justify-content-center" for="image"
+                    style="height: 500px;">
+                    <div id="upload-content" class=" w-100 h-100 d-flex justify-content-center align-items-center p-3">
+                        {% if image == None %}
+                        <img src="{{ url_for('static', filename='img/img.jpg') }}" alt="Upload logo" class="mb-3"
+                            width="50" height="50">
+                        <p>Click or drag file to this area to upload.</p>
+                        {% else %}
+                        <img src="{{ image }}" alt="Uploaded image"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                        {% endif %}
+                    </div>
+                </label>
+                <input id="image" class="upload-input" type="file" name="image" onchange="loadFile(event)">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Get Suggestions</button>
+            </form>
+        </div>
+        {% if items != None %}
+        <div class="d-flex flex-column">
+            <h1 class="h3 mb-3 font-weight-normal">Suggestions</h1>
+            <div class="d-flex flex-column flex-wrap">
+                {% for item in items[:7] %}
+                <div class="card m-2" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item }}</h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+
+</html>

@@ -81,10 +81,10 @@
                     {% for item in items[:10] %}
                     <div class="card mb-3 shadow suggestion-item" data-aos="fade-up">
                         <div class="card-body d-flex flex-column align-items-center">
-                            <img src="{{ url_for('serve_datasets', filename=item) }}" class="suggestion-image mb-2 h-100" alt="..." style="height: 150px; object-fit: cover;">
+                            <img src="{{ url_for('serve_datasets', filename=item[0]) }}" class="suggestion-image mb-2 h-100" alt="..." style="height: 150px; object-fit: cover;">
                             <h5 class="card-title">Suggestion {{ loop.index }}</h5>
                             <p class="card-text small">Brief description of the suggestion.</p>
-                            <a href="http://www.google.com" class="btn btn-warning btn-sm btn-block" target="_blank">
+                            <a href={{item[1]}} class="btn btn-warning btn-sm btn-block" target="_blank">
                                 <i class="fab fa-google mr-2"></i>Go to Google
                             </a>
                         </div>

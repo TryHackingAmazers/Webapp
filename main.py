@@ -1,0 +1,19 @@
+import sys
+sys.path.append('./recommendation')
+sys.path.append('./device_finder')
+
+from device_finder.find_objects import parse_image,compare
+from appliance_selector import get_recommendations
+import yolov_model as ym
+
+import cv2
+import numpy as np
+
+def get_recommendation_objects(input_image):
+    input_image = cv2.imdecode(np.fromstring(input_image.read(), np.uint8), cv2.IMREAD_UNCHANGED)
+
+    score = ym.process_image(input_image)
+    reco = get_recommendations(score)
+    return reco
+
+# print(get_recommendation_objects("/home/rohan/hackonama/recommendation/TimberlandkingLSWENGE_0d80ca15-a0ad-4341-8b5e-4efa70f4c7a5.webp"))

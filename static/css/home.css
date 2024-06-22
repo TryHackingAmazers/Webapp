@@ -1,0 +1,36 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.upload-form {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.upload-label {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #bbb;
+    background: #f8f9fa;
+}
+
+.upload-label:hover {
+    background: #ddd;
+}
+
+.upload-input {
+    display: none;
+}

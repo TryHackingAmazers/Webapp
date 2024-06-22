@@ -7,13 +7,13 @@ Welcome to the Interior Design Product Suggestions project! This tool aims to as
 ## Features
 
 - **Photo Upload:** Users can upload photos of their interior spaces.
-  ![User Input](./User_Input.jpg "Upload Your Room's Photo")
+  ![User Input](./readme_images/User_Input.jpg "Upload Your Room's Photo")
 - **Product Recommendations:** Based on the photo analysis, the tool suggests a range of products that complement the existing interior design.
-- **Product Images:** Detailed images of the suggested products are provided for better visualization.![Recommendations](./ui.png)
+- **Product Images:** Detailed images of the suggested products are provided for better visualization.![Recommendations](./readme_images/ui.png)
 - **Select a Suggested Product:** After viewing the recommendations, the user can chosse a product they're interested in.
-  ![The Bed Option](./Bed.png "Choose Your Favorite Furniture")
+  ![The Bed Option](./readme_images/Bed.png "Choose Your Favorite Furniture")
 - **Place Virtually in Your Room:** The user can click on the "Place in Room" button to see the furniture placed in their uploaded photo of the interior .
-  ![Final Visualization](./final_image.jpeg "Visualize the Furniture in Your Room")
+  ![Final Visualization](./readme_images/final_image.jpeg "Visualize the Furniture in Your Room")
 - **Amazon Redirect:** Users can choose a product and be redirected to Amazon to make a purchase.
 
 ## Getting Started
@@ -70,4 +70,4 @@ Follow these steps to set up the project environment:
 4. **Visualize in Your Room:** Use the "Place in Room" feature to virtually position the selected furniture in your uploaded interior photo. Adjust the placement to see how it fits with your space.
 5. **Purchase on Amazon:** Click the "Buy on Amazon" button to be redirected to the product page on Amazon.
 
-![Technical Pipeline](./technical_pipeline.png "Technical Pipeline")
+![Technical Pipeline](./readme_images/technical_pipeline.png "Technical Pipeline")

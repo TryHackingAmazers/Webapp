@@ -31,4 +31,8 @@ def get_similar_objects(item,path):
 def preprocess_image(image_path):
     path = generate_random_filename('jpg')
     return preprocess(image_path,path),path
-    
+
+def find_on_amazon(image_path,id):
+    return compare(image_path,id)
+
+# print(find_on_amazon('/home/rohan/hackonama/sample_images/TimberlandkingLSWENGE_0d80ca15-a0ad-4341-8b5e-4efa70f4c7a5.webp',0))
